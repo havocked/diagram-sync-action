@@ -15,7 +15,7 @@ WORKDIR /action
 # Copy code
 COPY src/ /action/src/
 COPY pyproject.toml /action/
-COPY diagram-sync-action/entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
 # Install dependencies
 RUN rye sync
