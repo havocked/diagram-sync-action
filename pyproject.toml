@@ -14,10 +14,4 @@ dependencies = [
 testpaths = ["tests"]
 
 [tool.ruff]
-line-length = 100
-
-[tool.rye]
-dev-dependencies = [
-    "pytest>=7.0.0",
-    "ruff>=0.4.0"
-] 
+line-length = 100 

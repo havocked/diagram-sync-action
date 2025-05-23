@@ -8,4 +8,4 @@ export CONFLUENCE_PAGE_ID="${INPUT_CONFLUENCE_PAGE_ID}"
 export DIAGRAMS_DIR="${INPUT_DIAGRAMS_DIR:-docs/diagrams}"
 
 cd /action
-rye run python -m src.diagram_sync.sync 
+python -m src.diagram_sync.sync 
