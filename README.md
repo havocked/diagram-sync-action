@@ -30,10 +30,11 @@ cd <your-repo>
 ```
 
 ### 2. **Install dependencies**
-We recommend using [Rye](https://github.com/astral-sh/rye) for Python dependency management:
-```sh
-rye sync
-```
+- Locally (for development):
+  ```sh
+  pip install -r requirements.txt
+  ```
+- In CI/Docker: dependencies are installed automatically from `requirements.txt`.
 
 ### 3. **Configure environment variables**
 Create a `.env` file or set the following variables in your CI/CD secrets:
@@ -51,7 +52,7 @@ Create a `.env` file or set the following variables in your CI/CD secrets:
 1. Place your `.puml` or `.plantuml` files in `docs/diagrams/`.
 2. Run the sync script:
    ```sh
-   rye run python -m src.diagram_sync.sync
+   python -m src.diagram_sync.sync
    ```
 3. The script will:
    - Render diagrams to SVG/PNG

@@ -8,6 +8,8 @@ dependencies = [
     "requests>=2.31.0",
 ]
 
+# To update requirements.txt, run: rye export --format=requirements.txt > requirements.txt
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
