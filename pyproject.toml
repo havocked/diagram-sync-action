@@ -1,0 +1,21 @@
+[project]
+name = "diagram-sync"
+version = "0.1.0"
+description = "Sync PlantUML/C4 diagrams from docs/diagrams to Confluence Cloud via REST API v2."
+authors = ["Your Name <your@email.com>"]
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.31.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.rye]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "ruff>=0.4.0"
+] 

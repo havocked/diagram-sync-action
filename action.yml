@@ -1,0 +1,26 @@
+name: 'Diagram Sync to Confluence'
+description: 'Sync PlantUML diagrams to Confluence Cloud using the plantumlcloud macro.'
+inputs:
+  confluence_url:
+    description: 'Base URL of your Confluence Cloud instance'
+    required: true
+  confluence_token:
+    description: 'API token for Confluence'
+    required: true
+  confluence_user:
+    description: 'Email of the Confluence user'
+    required: true
+  confluence_page_id:
+    description: 'Default Confluence page ID'
+    required: true
+  diagrams_dir:
+    description: 'Directory containing PlantUML diagrams'
+    required: false
+    default: 'docs/diagrams'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  entrypoint: '/entrypoint.sh'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue' 
